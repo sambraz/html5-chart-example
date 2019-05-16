@@ -70,7 +70,6 @@ function createGraph(data) {
 
     //draw vertical lines and labels
     for (i = 1; i <= data.length; i++) {
-        console.log("xscale", xStep, i)
         var x = (i * xStep);
         context.moveTo(x, colWidth);
         context.lineTo(x, yMax);
@@ -98,7 +97,6 @@ function createGraph(data) {
         context.beginPath();
         context.strokeStyle = colors.closes;        
         for (i = 1; i < dataSet.length; i++) {
-            console.log("close",dataSet[i].close )
             context.rect(i * xStep, yMax - (dataSet[i].close * yStep), 1, 1);
             context.fill()
         }
